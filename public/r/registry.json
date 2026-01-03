@@ -1,6 +1,6 @@
 {
-  "name": "shadcn/registry-template",
-  "homepage": "https://shadcn-registry-template.vercel.app",
+  "name": "shadcn/registry-kit",
+  "homepage": "https://shadcn-registry-kit.vercel.app",
   "items": [
     {
       "name": "your-component",

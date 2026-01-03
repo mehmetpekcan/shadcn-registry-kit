@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "mehmetpekcan",
-      url: "https://github.com/mehmetpekcan/shadcn-registry-template",
+      url: "https://github.com/mehmetpekcan/shadcn-registry-kit",
     },
   ],
   creator: "mehmetpekcan",

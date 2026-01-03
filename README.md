@@ -1,4 +1,4 @@
-# Shadcn Registry Template
+# Shadcn Registry Kit
 
 A template for building and publishing your own custom shadcn registry components. Includes documentation, landing page, and everything you need to deploy your component registry.
 

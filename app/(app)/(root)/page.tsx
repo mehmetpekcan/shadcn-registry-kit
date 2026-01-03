@@ -12,9 +12,9 @@ import { Button } from "@/components/ui/button"
 
 import { ComponentSection } from "./section"
 
-const title = "Shadcn Registry Template"
+const title = "Shadcn Registry Kit"
 const description =
-  "A template for building and publishing your own shadcn registry components. Fork, customize, and deploy."
+  "A starter kit for building and publishing your own shadcn registry components. Fork, customize, and deploy."
 
 export const dynamic = "force-static"
 export const revalidate = false
@@ -56,7 +56,7 @@ export default function IndexPage() {
           </Button>
           <Button asChild size="sm" variant="outline">
             <Link
-              href="https://github.com/mehmetpekcan/shadcn-registry-template"
+              href="https://github.com/mehmetpekcan/shadcn-registry-kit"
               target="_blank"
             >
               Use This Template

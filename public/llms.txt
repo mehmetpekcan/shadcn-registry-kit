@@ -1,4 +1,4 @@
-# Shadcn Registry Template
+# Shadcn Registry Kit
 
 > A template for building and publishing custom shadcn registry components.
 
@@ -24,8 +24,8 @@ npx shadcn@latest add https://your-site.com/r/your-component.json
 
 ## Links
 
-- Documentation: https://shadcn-registry-template.vercel.app/docs
-- GitHub: https://github.com/mehmetpekcan/shadcn-registry-template
+- Documentation: https://shadcn-registry-kit.vercel.app/docs
+- GitHub: https://github.com/mehmetpekcan/shadcn-registry-kit
 - shadcn docs: https://ui.shadcn.com/docs/registry
 
 ## Tech Stack
