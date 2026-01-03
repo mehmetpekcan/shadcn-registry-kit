@@ -7,4 +7,3 @@ export function CssIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
-

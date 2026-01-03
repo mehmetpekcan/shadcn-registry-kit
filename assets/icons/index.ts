@@ -5,4 +5,3 @@ export { CssIcon } from "./css"
 export { TypeScriptIcon } from "./typescript"
 export { JsonIcon } from "./json"
 export { SpinnerIcon } from "./spinner"
-

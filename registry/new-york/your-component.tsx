@@ -1,4 +1,4 @@
-import { forwardRef, HTMLAttributes } from "react"
+import { HTMLAttributes, forwardRef } from "react"
 
 export interface YourComponentProps extends HTMLAttributes<HTMLDivElement> {}
 

@@ -18,4 +18,3 @@ export function SpinnerIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
-

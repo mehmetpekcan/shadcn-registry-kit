@@ -10,4 +10,3 @@ export function GitHubIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
-

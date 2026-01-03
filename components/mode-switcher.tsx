@@ -1,10 +1,10 @@
 "use client"
 
-import * as React from "react"
 import { useTheme } from "next-themes"
+import * as React from "react"
 
-import { useMetaColor } from "@/hooks/use-meta-color"
 import { Button } from "@/components/ui/button"
+import { useMetaColor } from "@/hooks/use-meta-color"
 
 export function ModeSwitcher() {
   const { setTheme, resolvedTheme } = useTheme()

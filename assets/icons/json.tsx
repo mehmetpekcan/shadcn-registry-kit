@@ -10,4 +10,3 @@ export function JsonIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
-

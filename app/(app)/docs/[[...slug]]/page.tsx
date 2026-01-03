@@ -1,5 +1,3 @@
-import Link from "next/link"
-import { notFound } from "next/navigation"
 import { mdxComponents } from "@/mdx-components"
 import {
   IconArrowLeft,
@@ -7,13 +5,15 @@ import {
   IconArrowUpRight,
 } from "@tabler/icons-react"
 import { findNeighbour } from "fumadocs-core/page-tree"
+import Link from "next/link"
+import { notFound } from "next/navigation"
 
-import { source } from "@/lib/source"
-import { absoluteUrl } from "@/lib/utils"
 import { DocsCopyPage } from "@/components/docs-copy-page"
 import { DocsTableOfContents } from "@/components/docs-toc"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { source } from "@/lib/source"
+import { absoluteUrl } from "@/lib/utils"
 
 export const revalidate = false
 export const dynamic = "force-static"

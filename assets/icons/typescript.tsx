@@ -7,4 +7,3 @@ export function TypeScriptIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
-

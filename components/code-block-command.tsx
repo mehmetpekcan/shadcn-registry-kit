@@ -1,22 +1,17 @@
 "use client"
 
-import * as React from "react"
 import { CheckIcon, ClipboardIcon, TerminalIcon } from "lucide-react"
+import * as React from "react"
 
-import { useConfig } from "@/hooks/use-config"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
 import { Button } from "@/components/ui/button"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { useConfig } from "@/hooks/use-config"
 
 export function CodeBlockCommand({
   __npm__,

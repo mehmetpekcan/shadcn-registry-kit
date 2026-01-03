@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-import { type DocsConfig } from "@/lib/docs"
 import {
   Sidebar,
   SidebarContent,
@@ -17,6 +16,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
+import { type DocsConfig } from "@/lib/docs"
 
 export function DocsSidebar({
   tree,

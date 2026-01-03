@@ -1,18 +1,11 @@
 "use client"
 
-import * as React from "react"
-import { useRouter } from "next/navigation"
 import { type DialogProps } from "@radix-ui/react-dialog"
 import { IconArrowRight } from "@tabler/icons-react"
 import { CornerDownLeftIcon, SquareDashedIcon } from "lucide-react"
+import { useRouter } from "next/navigation"
+import * as React from "react"
 
-import { type Color, type ColorPalette } from "@/lib/colors"
-import { showMcpDocs } from "@/lib/flags"
-import { source } from "@/lib/source"
-import { cn } from "@/lib/utils"
-import { useConfig } from "@/hooks/use-config"
-import { useIsMac } from "@/hooks/use-is-mac"
-import { useMutationObserver } from "@/hooks/use-mutation-observer"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
 import { Button } from "@/components/ui/button"
 import {
@@ -32,6 +25,13 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Separator } from "@/components/ui/separator"
+import { useConfig } from "@/hooks/use-config"
+import { useIsMac } from "@/hooks/use-is-mac"
+import { useMutationObserver } from "@/hooks/use-mutation-observer"
+import { type Color, type ColorPalette } from "@/lib/colors"
+import { showMcpDocs } from "@/lib/flags"
+import { source } from "@/lib/source"
+import { cn } from "@/lib/utils"
 
 export function CommandMenu({
   tree,
@@ -168,7 +168,7 @@ export function CommandMenu({
         <Command
           className="**:data-[slot=command-input-wrapper]:bg-input/50 **:data-[slot=command-input-wrapper]:border-input rounded-none bg-transparent **:data-[slot=command-input]:!h-9 **:data-[slot=command-input]:py-0 **:data-[slot=command-input-wrapper]:mb-0 **:data-[slot=command-input-wrapper]:!h-9 **:data-[slot=command-input-wrapper]:rounded-md **:data-[slot=command-input-wrapper]:border"
           filter={(value, search, keywords) => {
-            const extendValue = value + " " + (keywords?.join(" ") || "")
+            const extendValue = `${value} ${keywords?.join(" ") || ""}`
             if (extendValue.toLowerCase().includes(search.toLowerCase())) {
               return 1
             }

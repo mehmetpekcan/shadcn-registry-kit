@@ -1,16 +1,16 @@
 "use client"
 
-import * as React from "react"
 import { CheckIcon, ClipboardIcon } from "lucide-react"
+import * as React from "react"
 
-import { Event, trackEvent } from "@/lib/events"
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { Event, trackEvent } from "@/lib/events"
+import { cn } from "@/lib/utils"
 
 export function copyToClipboardWithMeta(value: string, event?: Event) {
   navigator.clipboard.writeText(value)

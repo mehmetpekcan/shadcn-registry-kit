@@ -32,4 +32,3 @@ export function LogoIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
-

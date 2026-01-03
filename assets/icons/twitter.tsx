@@ -13,4 +13,3 @@ export function TwitterIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
-

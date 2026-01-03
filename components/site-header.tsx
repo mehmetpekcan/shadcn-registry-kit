@@ -1,9 +1,6 @@
 import Link from "next/link"
 
 import { LogoIcon } from "@/assets/icons"
-import { getColors } from "@/lib/colors"
-import { siteConfig } from "@/lib/config"
-import { source } from "@/lib/source"
 import { CommandMenu } from "@/components/command-menu"
 import { GitHubLink } from "@/components/github-link"
 import { MainNav } from "@/components/main-nav"
@@ -13,6 +10,9 @@ import { SiteConfig } from "@/components/site-config"
 // import blocks from "@/registry/__blocks__.json"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
+import { getColors } from "@/lib/colors"
+import { siteConfig } from "@/lib/config"
+import { source } from "@/lib/source"
 
 export function SiteHeader() {
   const colors = getColors()

@@ -1,14 +1,14 @@
 import type { Metadata } from "next"
 
-import { META_THEME_COLORS, siteConfig } from "@/lib/config"
-import { fontVariables } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
-import { LayoutProvider } from "@/hooks/use-layout"
 import { ActiveThemeProvider } from "@/components/active-theme"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
+import { LayoutProvider } from "@/hooks/use-layout"
+import { META_THEME_COLORS, siteConfig } from "@/lib/config"
+import { fontVariables } from "@/lib/fonts"
+import { cn } from "@/lib/utils"
 
 import "@/styles/globals.css"
 

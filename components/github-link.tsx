@@ -1,10 +1,10 @@
-import * as React from "react"
 import Link from "next/link"
+import * as React from "react"
 
 import { GitHubIcon } from "@/assets/icons"
-import { siteConfig } from "@/lib/config"
 import { Button } from "@/components/ui/button"
 import { Skeleton } from "@/components/ui/skeleton"
+import { siteConfig } from "@/lib/config"
 
 export function GitHubLink() {
   return (
@@ -20,16 +20,19 @@ export function GitHubLink() {
 }
 
 export async function StarsCount() {
-  const data = await fetch("https://api.github.com/repos/mehmetpekcan/shadcn-registry-kit", {
-    next: { revalidate: 86400 }, // Cache for 1 day (86400 seconds)
-  })
+  const data = await fetch(
+    "https://api.github.com/repos/mehmetpekcan/shadcn-registry-kit",
+    {
+      next: { revalidate: 86400 }, // Cache for 1 day (86400 seconds)
+    }
+  )
   const json = await data.json()
 
   return (
     <span className="text-muted-foreground w-8 text-xs tabular-nums">
       {json.stargazers_count >= 1000
         ? `${(json.stargazers_count / 1000).toFixed(1)}k`
-        : json.stargazers_count?.toLocaleString() ?? "0"}
+        : (json.stargazers_count?.toLocaleString() ?? "0")}
     </span>
   )
 }
