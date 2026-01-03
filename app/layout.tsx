@@ -19,7 +19,22 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: ["Next.js", "React", "Tailwind CSS", "Components", "shadcn", "registry", "template"],
+  keywords: [
+    "shadcn",
+    "shadcn registry",
+    "shadcn components",
+    "shadcn template",
+    "react components",
+    "component library",
+    "tailwind components",
+    "ui components",
+    "nextjs components",
+    "custom registry",
+    "component registry",
+    "npx shadcn add",
+  ],
+  category: "technology",
+  classification: "Developer Tools",
   authors: [
     {
       name: "mehmetpekcan",
@@ -66,6 +81,29 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareSourceCode",
+              name: siteConfig.name,
+              description: siteConfig.description,
+              url: siteConfig.url,
+              codeRepository: siteConfig.links.github,
+              programmingLanguage: ["TypeScript", "React", "Next.js"],
+              runtimePlatform: "Node.js",
+              applicationCategory: "DeveloperApplication",
+              operatingSystem: "Cross-platform",
+              author: {
+                "@type": "Person",
+                name: "mehmetpekcan",
+                url: "https://github.com/mehmetpekcan",
+              },
+              license: "https://opensource.org/licenses/MIT",
+            }),
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

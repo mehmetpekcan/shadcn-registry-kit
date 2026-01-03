@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button"
 
 import { ComponentSection } from "./section"
 
-const title = "Shadcn Component Template"
+const title = "Shadcn Registry Template"
 const description =
   "A template for building and publishing your own shadcn registry components. Fork, customize, and deploy."
 
