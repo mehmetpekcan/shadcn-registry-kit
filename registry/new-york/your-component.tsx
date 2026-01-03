@@ -1,4 +1,5 @@
 import { HTMLAttributes, forwardRef } from "react"
+import { cn } from "../../lib/utils"
 
 export interface YourComponentProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -20,19 +21,12 @@ const YourComponent = forwardRef<HTMLDivElement, YourComponentProps>(
     return (
       <div
         ref={ref}
-        className={className}
-        style={{
-          padding: "2rem",
-          borderRadius: "0.5rem",
-          textAlign: "center",
-          backgroundColor: "rgba(0,0,0,0.02)",
-        }}
+        className={cn("p-4 rounded-md text-center bg-muted/20 space-y-2 border border-muted h-48 flex items-center flex-col justify-center", className)}
         {...props}
       >
-        <p style={{ margin: "0.5rem 0 0", fontSize: "0.875rem", opacity: 0.7 }}>
+        <p className="text-sm text-muted-foreground/70">
           Replace this placeholder with your custom shadcn component
         </p>
-        <br />
         <p className="text-muted-foreground text-center text-xs">
           Edit{" "}
           <code className="bg-muted rounded px-1.5 py-0.5 text-xs">
