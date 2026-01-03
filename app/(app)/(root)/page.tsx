@@ -8,7 +8,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/page-header"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/components/ui/button"
 
 import { ComponentSection } from "./section"
 
@@ -56,7 +56,7 @@ export default function IndexPage() {
           </Button>
           <Button asChild size="sm" variant="outline">
             <Link
-              href="https://github.com/mehmetpekcan/shadcn-component-template"
+              href="https://github.com/mehmetpekcan/shadcn-registry-template"
               target="_blank"
             >
               Use This Template

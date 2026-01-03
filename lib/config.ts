@@ -1,11 +1,11 @@
 export const siteConfig = {
-  name: "shadcn/component-template",
-  url: "https://shadcn-component-template.vercel.app",
-  ogImage: "https://shadcn-component-template.vercel.app/og.jpg",
+  name: "shadcn/registry-template",
+  url: "https://shadcn-registry-template.vercel.app",
+  ogImage: "https://shadcn-registry-template.vercel.app/og.jpg",
   description:
     "A template for building and publishing your own shadcn registry components.",
   links: {
-    github: "https://github.com/mehmetpekcan/shadcn-component-template",
+    github: "https://github.com/mehmetpekcan/shadcn-registry-template",
   },
   navItems: [
     {

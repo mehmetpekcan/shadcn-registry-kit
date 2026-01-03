@@ -1,4 +1,4 @@
-# Shadcn Component Template
+# Shadcn Registry Template
 
 A template for building and publishing your own custom shadcn registry components. Includes documentation, landing page, and everything you need to deploy your component registry.
 
@@ -18,9 +18,9 @@ A template for building and publishing your own custom shadcn registry component
 pnpm install
 ```
 
-3. **Replace the placeholder component** at `registry/new-york-v4/ui/your-component.tsx`
+3. **Replace the placeholder component** at `registry/new-york/your-component.tsx`
 
-4. **Update the registry** in `registry/registry-ui.ts`
+4. **Update `registry.json`** with your component details
 
 5. **Build the registry**:
 ```bash
@@ -46,12 +46,12 @@ npx shadcn@latest add https://your-domain.vercel.app/r/your-component.json
 
 ```
 ├── registry/
-│   ├── new-york-v4/ui/     # Your components go here
-│   ├── registry-ui.ts       # Component definitions
-│   └── index.ts             # Registry configuration
-├── content/docs/            # Documentation (MDX)
-├── app/                     # Next.js app
-└── public/r/                # Built registry files
+│   └── new-york/           # Your components go here
+│       └── your-component.tsx
+├── registry.json           # Component registry manifest
+├── content/docs/           # Documentation (MDX)
+├── app/                    # Next.js app
+└── public/r/               # Built registry files (auto-generated)
 ```
 
 ## Scripts

@@ -3,13 +3,11 @@ title: Installation
 description: How to use this template to build your own shadcn component.
 ---
 
-## For Template Users
-
-If you want to **build your own component registry**, follow these steps:
+## Building Your Component
 
 ### 1. Fork the Template
 
-Click "Use this template" on [GitHub](https://github.com/mehmetpekcan/shadcn-component-template) to create your own repository.
+Click "Use this template" on [GitHub](https://github.com/mehmetpekcan/shadcn-registry-template).
 
 ### 2. Install Dependencies
 
@@ -17,84 +15,89 @@ Click "Use this template" on [GitHub](https://github.com/mehmetpekcan/shadcn-com
 pnpm install
 ```
 
-### 3. Replace the Placeholder Component
+### 3. Create Your Component
 
-Edit the placeholder component at `registry/new-york-v4/ui/your-component.tsx`:
+Replace the placeholder at `registry/new-york/your-component.tsx`:
 
 ```tsx
-import { HTMLAttributes, forwardRef } from "react"
+import { forwardRef, HTMLAttributes } from "react"
+import { cn } from "@/lib/utils"
 
-export interface YourComponentProps extends HTMLAttributes<HTMLDivElement> {
-  // Add your custom props here
+export interface MyButtonProps extends HTMLAttributes<HTMLButtonElement> {
+  variant?: "default" | "outline"
 }
 
-const YourComponent = forwardRef<HTMLDivElement, YourComponentProps>(
-  ({ className, ...props }, ref) => {
+const MyButton = forwardRef<HTMLButtonElement, MyButtonProps>(
+  ({ className, variant = "default", ...props }, ref) => {
     return (
-      <div ref={ref} className={className} {...props}>
-        {/* Your component implementation */}
-      </div>
+      <button
+        ref={ref}
+        className={cn(
+          "rounded-md px-4 py-2 font-medium",
+          variant === "default" && "bg-primary text-primary-foreground",
+          variant === "outline" && "border border-input",
+          className
+        )}
+        {...props}
+      />
     )
   }
 )
 
-YourComponent.displayName = "YourComponent"
+MyButton.displayName = "MyButton"
 
-export { YourComponent }
+export { MyButton }
 ```
 
-### 4. Update the Registry
+### 4. Update registry.json
 
-Edit `registry/registry-ui.ts` to match your component:
-
-```ts
-export const ui: Registry["items"] = [
-  {
-    name: "your-component",
-    type: "registry:ui",
-    title: "Your Component",
-    description: "Description of your component.",
-    files: [
-      {
-        path: "ui/your-component.tsx",
-        target: "components/ui/your-component.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
-]
+```json
+{
+  "name": "your-name/your-registry",
+  "homepage": "https://your-site.vercel.app",
+  "items": [
+    {
+      "name": "my-button",
+      "type": "registry:ui",
+      "title": "My Button",
+      "description": "A custom button component.",
+      "files": [
+        {
+          "path": "registry/new-york/my-button.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/my-button.tsx"
+        }
+      ]
+    }
+  ]
+}
 ```
 
-### 5. Build the Registry
+### 5. Build & Deploy
 
 ```bash
 pnpm registry:build
+pnpm build
 ```
 
-### 6. Deploy to Vercel
-
-Push your changes to GitHub and deploy to Vercel. Your component will be available at:
-
-```bash
-npx shadcn@latest add https://your-domain.vercel.app/r/your-component.json
-```
+Deploy to Vercel and your component is live!
 
 ---
 
-## For Component Users
+## Installing Components
 
-If you want to **install a component** from a registry built with this template:
+To install a component from any registry built with this template:
 
 ```bash
-npx shadcn@latest add https://shadcn-component-template.vercel.app/r/your-component.json
+npx shadcn@latest add https://example.com/r/my-button.json
 ```
 
-Then use it in your project:
+Then use it:
 
 ```tsx
-import { YourComponent } from "@/components/ui/your-component"
+import { MyButton } from "@/components/ui/my-button"
 
 export function Demo() {
-  return <YourComponent>Hello World</YourComponent>
+  return <MyButton variant="outline">Click me</MyButton>
 }
 ```

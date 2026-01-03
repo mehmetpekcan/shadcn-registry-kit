@@ -4,11 +4,11 @@ import * as React from "react"
 import template from "lodash/template"
 import { CheckIcon, ClipboardIcon } from "lucide-react"
 
+import { CssIcon } from "@/assets/icons"
 import { cn } from "@/lib/utils"
 import { useThemeConfig } from "@/components/active-theme"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
-import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -16,7 +16,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york-v4/ui/dialog"
+} from "@/components/ui/dialog"
 import {
   Drawer,
   DrawerContent,
@@ -24,9 +24,9 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/new-york-v4/ui/drawer"
-import { Label } from "@/registry/new-york-v4/ui/label"
-import { ScrollArea, ScrollBar } from "@/registry/new-york-v4/ui/scroll-area"
+} from "@/components/ui/drawer"
+import { Label } from "@/components/ui/label"
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import {
   Select,
   SelectContent,
@@ -34,18 +34,18 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york-v4/ui/select"
+} from "@/components/ui/select"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york-v4/ui/tabs"
+} from "@/components/ui/tabs"
 import {
   BaseColor,
   baseColors,
   baseColorsOKLCH,
-} from "@/registry/registry-base-colors"
+} from "@/lib/registry-base-colors"
 
 interface BaseColorOKLCH {
   light: Record<string, string>
@@ -205,7 +205,7 @@ function CustomizerCode({ themeName }: { themeName: string }) {
               data-language="css"
               data-theme="github-dark github-light-default"
             >
-              <Icons.css className="fill-foreground" />
+              <CssIcon className="fill-foreground" />
               app/globals.css
             </figcaption>
             <pre className="no-scrollbar max-h-[300px] min-w-0 overflow-x-auto px-4 py-3.5 outline-none has-[[data-highlighted-line]]:px-0 has-[[data-line-numbers]]:px-0 has-[[data-slot=tabs]]:p-0 md:max-h-[450px]">
@@ -285,7 +285,7 @@ function CustomizerCode({ themeName }: { themeName: string }) {
               data-language="css"
               data-theme="github-dark github-light-default"
             >
-              <Icons.css className="fill-foreground" />
+              <CssIcon className="fill-foreground" />
               app/globals.css
             </figcaption>
             <pre className="no-scrollbar max-h-[300px] min-w-0 overflow-x-auto px-4 py-3.5 outline-none has-[[data-highlighted-line]]:px-0 has-[[data-line-numbers]]:px-0 has-[[data-slot=tabs]]:p-0 md:max-h-[450px]">

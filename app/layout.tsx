@@ -8,7 +8,7 @@ import { ActiveThemeProvider } from "@/components/active-theme"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/registry/new-york-v4/ui/sonner"
+import { Toaster } from "@/components/ui/sonner"
 
 import "@/styles/globals.css"
 
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "mehmetpekcan",
-      url: "https://github.com/mehmetpekcan/shadcn-component-template",
+      url: "https://github.com/mehmetpekcan/shadcn-registry-template",
     },
   ],
   creator: "mehmetpekcan",

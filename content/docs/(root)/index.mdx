@@ -3,74 +3,86 @@ title: Introduction
 description: A template for building and publishing your own shadcn registry components.
 ---
 
-This is a **template repository** designed to help you create and publish your own custom components to the shadcn registry system.
+A **ready-to-use template** for creating and publishing custom components to the [shadcn registry](https://ui.shadcn.com/docs/registry).
 
-## What is this?
+## What You Get
 
-This template provides everything you need to:
+- 📦 **Simple structure** - One component file + one config file
+- 📚 **Documentation site** - Powered by Fumadocs
+- 🎨 **Registry compatible** - Works with `npx shadcn add`
+- 🚀 **Deploy ready** - One-click Vercel deployment
 
-- **Build** custom React components following shadcn patterns
-- **Document** your components with a beautiful docs site
-- **Publish** components via the shadcn registry system (`npx shadcn add`)
-- **Deploy** your component registry to Vercel
+## How It Works
 
-## Getting Started
+```
+registry/
+└── new-york/
+    └── your-component.tsx   ← Your component
 
-1. **Fork this template** - Click "Use this template" on GitHub
-2. **Replace the placeholder component** - Edit `registry/new-york-v4/ui/your-component.tsx`
-3. **Update the registry** - Modify `registry/registry-ui.ts` with your component details
-4. **Build the registry** - Run `pnpm registry:build`
-5. **Deploy** - Push to GitHub and deploy to Vercel
+registry.json                ← Component metadata
+```
+
+When you run `pnpm registry:build`, it generates files in `public/r/` that the shadcn CLI can install from.
+
+## Quick Start
+
+```bash
+# 1. Fork this template on GitHub
+
+# 2. Install dependencies
+pnpm install
+
+# 3. Edit your component
+# → registry/new-york/your-component.tsx
+
+# 4. Update registry.json with your component details
+
+# 5. Build & run
+pnpm registry:build
+pnpm dev
+```
+
+Once deployed, users install your component with:
+
+```bash
+npx shadcn@latest add https://your-site.vercel.app/r/your-component.json
+```
 
 ## FAQ
 
 <Accordion type="multiple">
 
 <AccordionItem value="faq-1">
-	<AccordionTrigger>
-		Why copy/paste and not packaged as a dependency?
-	</AccordionTrigger>
-	<AccordionContent>
-The idea behind this is to give you ownership and control over the code, allowing you to decide how the components are built and styled.
+<AccordionTrigger>
+Why copy/paste instead of npm packages?
+</AccordionTrigger>
+<AccordionContent>
 
-Start with some sensible defaults, then customize the components to your needs.
-
-One of the drawbacks of packaging the components in an npm package is that the style is coupled with the implementation. _The design of your components should be separate from their implementation._
+The shadcn philosophy gives you **ownership** of the code. You can customize components to your exact needs without fighting library constraints.
 
 </AccordionContent>
 </AccordionItem>
 
 <AccordionItem value="faq-2">
 <AccordionTrigger>
-How does the shadcn registry work?
+Which frameworks are supported?
 </AccordionTrigger>
 <AccordionContent>
 
-The shadcn CLI can install components from any URL that serves a valid registry JSON file. When you run `npx shadcn add <url>`, it fetches the component definition and copies the files to your project.
+Any React framework: Next.js, Remix, Astro, Gatsby, Vite, etc.
 
 </AccordionContent>
 </AccordionItem>
 
 <AccordionItem value="faq-3">
 <AccordionTrigger>
-Which frameworks are supported?
+Can I publish multiple components?
 </AccordionTrigger>
 <AccordionContent>
 
-You can use any framework that supports React. [Next.js](https://ui.shadcn.com/docs/installation/next), [Astro](https://ui.shadcn.com/docs/installation/astro), [Remix](https://ui.shadcn.com/docs/installation/remix), [Gatsby](https://ui.shadcn.com/docs/installation/gatsby) etc.
+Yes! Add more files to `registry/new-york/` and list them in `registry.json`.
 
 </AccordionContent>
-</AccordionItem>
-
-<AccordionItem value="faq-4">
-	<AccordionTrigger>
-	Can I use this template for commercial projects?
-	</AccordionTrigger>
-	<AccordionContent>
-Yes. Free to use for personal and commercial projects. No attribution required.
-
-    </AccordionContent>
-
 </AccordionItem>
 
 </Accordion>

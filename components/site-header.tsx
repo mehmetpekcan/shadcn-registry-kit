@@ -1,18 +1,18 @@
 import Link from "next/link"
 
+import { LogoIcon } from "@/assets/icons"
 import { getColors } from "@/lib/colors"
 import { siteConfig } from "@/lib/config"
 import { source } from "@/lib/source"
 import { CommandMenu } from "@/components/command-menu"
 import { GitHubLink } from "@/components/github-link"
-import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { ModeSwitcher } from "@/components/mode-switcher"
 import { SiteConfig } from "@/components/site-config"
 // import blocks from "@/registry/__blocks__.json"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
 
 export function SiteHeader() {
   const colors = getColors()
@@ -34,7 +34,7 @@ export function SiteHeader() {
             className="hidden size-8 lg:flex"
           >
             <Link href="/">
-              <Icons.logo className="size-5" />
+              <LogoIcon className="size-5" />
               <span className="sr-only">{siteConfig.name}</span>
             </Link>
           </Button>

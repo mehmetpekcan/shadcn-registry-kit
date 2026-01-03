@@ -1,11 +1,8 @@
-import { Icons } from "@/components/icons"
-
 export interface NavItem {
   title: string
   href?: string
   disabled?: boolean
   external?: boolean
-  icon?: keyof typeof Icons
   label?: string
 }
 
@@ -30,6 +27,16 @@ export const docsConfig: DocsConfig = {
         {
           title: "Installation",
           href: "/docs/installation",
+          items: [],
+        },
+      ],
+    },
+    {
+      title: "Examples",
+      items: [
+        {
+          title: "Basic Usage",
+          href: "/docs/examples/basic",
           items: [],
         },
       ],

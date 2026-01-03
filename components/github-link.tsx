@@ -1,16 +1,16 @@
 import * as React from "react"
 import Link from "next/link"
 
+import { GitHubIcon } from "@/assets/icons"
 import { siteConfig } from "@/lib/config"
-import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Skeleton } from "@/registry/new-york-v4/ui/skeleton"
+import { Button } from "@/components/ui/button"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export function GitHubLink() {
   return (
     <Button asChild size="sm" variant="ghost" className="h-8 shadow-none">
       <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
-        <Icons.gitHub />
+        <GitHubIcon />
         <React.Suspense fallback={<Skeleton className="h-4 w-8" />}>
           <StarsCount />
         </React.Suspense>
@@ -20,7 +20,7 @@ export function GitHubLink() {
 }
 
 export async function StarsCount() {
-  const data = await fetch("https://api.github.com/repos/mehmetpekcan/shadcn-component-template", {
+  const data = await fetch("https://api.github.com/repos/mehmetpekcan/shadcn-registry-template", {
     next: { revalidate: 86400 }, // Cache for 1 day (86400 seconds)
   })
   const json = await data.json()

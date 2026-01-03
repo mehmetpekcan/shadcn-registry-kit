@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "shadcn Registry Template",
+  "short_name": "Registry Template",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
