@@ -3,9 +3,8 @@ import Link from "next/link"
 import * as React from "react"
 
 import { Callout } from "@/components/callout"
-import { CodeBlockCommand } from "@/components/code-block-command"
+import { CodeBlock } from "@/components/code-block"
 import { CodeTabs } from "@/components/code-tabs"
-import { ComponentPreview } from "@/components/component-preview"
 import { CopyButton } from "@/components/copy-button"
 import { getIconForLanguageExtension } from "@/components/icons"
 import {
@@ -228,7 +227,7 @@ export const mdxComponents = {
     const isNpmCommand = __npm__ && __yarn__ && __pnpm__ && __bun__
     if (isNpmCommand) {
       return (
-        <CodeBlockCommand
+        <CodeBlock
           __npm__={__npm__}
           __yarn__={__yarn__}
           __pnpm__={__pnpm__}
@@ -330,11 +329,13 @@ export const mdxComponents = {
   AlertDescription,
   AspectRatio,
   CodeTabs,
-  ComponentPreview: ({
+  CodeBlock: ({
     className,
     ...props
-  }: React.ComponentProps<typeof ComponentPreview>) => (
-    <ComponentPreview className={cn("mt-6", className)} {...props} />
+  }: React.ComponentProps<typeof CodeBlock>) => (
+    <div className={cn("mt-6", className)}>
+      <CodeBlock {...props} />
+    </div>
   ),
   Link: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
     <Link
